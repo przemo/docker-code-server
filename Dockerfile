@@ -107,7 +107,7 @@ ENV LANG en_US.UTF-8
 
 RUN echo "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/" > /etc/apt/sources.list
 ENV R_BASE_VERSION 4.0.2
-
+RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 ## Now install R and littler, and create a link for littler in /usr/local/bin
 
 
