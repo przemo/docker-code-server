@@ -112,8 +112,8 @@ RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D6
 
 
 RUN apt-get update \
-        && apt-get install -y  --no-install-recommends\
-                gcc \
+        && apt-get install -y  --no-install-recommends \
+                gcc-7 \
                 libopenblas-base \
 		littler \
                 r-cran-littler \
