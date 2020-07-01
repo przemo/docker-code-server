@@ -137,7 +137,7 @@ RUN apt-get update \
 ## RUN r-devel
 
 RUN apt-get update -qq \
-	&& apt-get install -y --no-install-recommends \
+	&& apt-get install -y  \
 		bash-completion \
 		bison \
 		debhelper \
@@ -146,6 +146,7 @@ RUN apt-get update -qq \
 		gcc \
 		gdb \
 		gfortran \
+		libssl-dev \
 		groff-base \
 		libblas-dev \
 		libxml2-dev \
