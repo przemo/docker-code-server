@@ -112,9 +112,9 @@ RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D6
 
 
 RUN apt-get update \
-        && apt-get install -y \
+        && apt-get install -y  --no-install-recommends\
                 gcc \
-                libopenblas0-pthread \
+                libopenblas-base \
 		littler \
                 r-cran-littler \
 		r-base=${R_BASE_VERSION}-* \
