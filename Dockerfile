@@ -54,8 +54,8 @@ RUN \
 	libxkbfile-dev \
 	libsecret-1-dev \
 	pkg-config && \
- apt-get clean && \
- rm -rf \
+    apt-get clean && \
+    rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
@@ -110,7 +110,7 @@ ENV R_BASE_VERSION 4.0.2
 
 ## Now install R and littler, and create a link for littler in /usr/local/bin
 RUN apt-get update \
-        && apt-get install -t unstable -y --no-install-recommends \
+        && apt-get install -y \
                 gcc-9-base \
                 libopenblas0-pthread \
 		littler \
@@ -134,7 +134,7 @@ RUN apt-get update \
 ## RUN r-devel
 
 RUN apt-get update -qq \
-	&& apt-get install -t unstable -y --no-install-recommends \
+	&& apt-get install -y --no-install-recommends \
 		bash-completion \
 		bison \
 		debhelper \
@@ -245,6 +245,3 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     BiocManager \  
     expss \
     openxlsx 
-    
-  
-  
