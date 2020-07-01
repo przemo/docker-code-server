@@ -113,7 +113,7 @@ RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D6
 
 RUN apt-get update \
         && apt-get install -y \
-                gcc-9 \
+                gcc \
                 libopenblas0-pthread \
 		littler \
                 r-cran-littler \
