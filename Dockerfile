@@ -105,8 +105,8 @@ ENV LANG en_US.UTF-8
 ## Use Debian unstable via pinning -- new style via APT::Default-Release
 ## RUN echo "deb http://http.debian.net/debian sid main" > /etc/apt/sources.list.d/debian-unstable.list \        ## && echo 'APT::Default-Release "testing";' > /etc/apt/apt.conf.d/default
 
-RUN echo "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/" > /etc/apt/sources.list
-RUN echo "deb http://archive.ubuntu.com/ubuntu bionic main restricted" > /etc/apt/sources.list
+RUN echo "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/" >> /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu bionic main restricted" >> /etc/apt/sources.list
 ENV R_BASE_VERSION 4.0.2
 RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 ## Now install R and littler, and create a link for littler in /usr/local/bin
