@@ -184,11 +184,9 @@ RUN apt-get update -qq \
 
 
 
-## Set Renviron to get libs from base R install
-RUN echo "R_LIBS=\${R_LIBS-'/usr/local/lib/R/site-library:/usr/local/lib/R/library:/usr/lib/R/library'}" >> /usr/local/lib/R/etc/Renviron
 
 ## Set default CRAN repo
-RUN echo 'options(repos = c(CRAN = "https://cran.rstudio.com/"), download.file.method = "libcurl")' >> /usr/local/lib/R/etc/Rprofile.site
+RUN echo 'options(repos = c(CRAN = "https://cran.rstudio.com/"), download.file.method = "libcurl")' >> /usr/lib/R/etc/Rprofile.site
 
 ## Copy 'checkbashisms' (as a local copy from devscripts package)
 COPY checkbashisms /usr/local/bin
