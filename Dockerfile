@@ -148,6 +148,14 @@ RUN apt-get update -qq \
 		gfortran \
 		groff-base \
 		libblas-dev \
+		libxml2-dev \
+  libsqlite-dev \
+  libmariadbd-dev \
+  libmariadbclient-dev \
+  libpq-dev \
+  libssh2-1-dev \
+  unixodbc-dev \
+  libsasl2-dev \
 		libbz2-dev \
 		libcairo2-dev \
 		libcurl4-openssl-dev \
