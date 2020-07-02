@@ -209,6 +209,7 @@ RUN install2.r --error \
     formatR \
     remotes \
     selectr \
-    BiocManager \  
     expss \
-    openxlsx 
+    openxlsx
+    
+RUN R -e "devtools::install_github('strengejacke/strengejacke')"
