@@ -132,7 +132,7 @@ RUN apt-get update \
 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
 	&& rm -rf /var/lib/apt/lists/*
 
-	CMD ["R"]
+##	CMD ["R"]
 	
 ## RUN r-devel
 
@@ -199,7 +199,6 @@ RUN echo 'options(repos = c(CRAN = "https://cran.rstudio.com/"), download.file.m
 
 ## Copy 'checkbashisms' (as a local copy from devscripts package)
 COPY checkbashisms /usr/local/bin
-
 
 RUN install2.r --error \
     --deps TRUE \
